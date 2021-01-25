@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using TradeMarketSystem.Core.Model.Daily_Market;
 
-namespace ExceedERP.DataAccess.Context
+namespace TradeMarketSystem.DataAccess.Context
 {
     public class TradeDbContext : DbContext
     {
@@ -38,7 +38,7 @@ namespace ExceedERP.DataAccess.Context
    
 
             #region InfoDesk
-            modelBuilder.Configurations.Add(new ExceedERP.DataAccess.Context.DailyMarketEntityConfiguration.SubCityEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new TradeMarketSystem.DataAccess.Context.DailyMarketEntityConfiguration.SubCityEntityTypeConfiguration());
           
             #endregion
 

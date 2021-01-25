@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TradeMarketSystem.Core.Model.Daily_Market;
 
-namespace ExceedERP.DataAccess.Context
+namespace TradeMarketSystem.DataAccess.Context
 {
    public class DailyMarketEntityConfiguration
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using ExceedERP.DataAccess.Context;
+using TradeMarketSystem.DataAccess.Context;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using TradeMarketSystem.Core.Model.Daily_Market;
