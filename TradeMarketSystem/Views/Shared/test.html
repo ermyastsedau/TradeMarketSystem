@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Matrix Admin</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/Content/frontend/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/frontend/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="~/Content/frontend/css/fullcalendar.css" />
+    <link rel="stylesheet" href="~/Content/frontend/css/matrix-style.css" />
+    <link rel="stylesheet" href="~/Content/frontend/css/matrix-media.css" />
+    <link href="~/Content/frontend/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/frontend/css/jquery.gritter.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+    <!--Header-part-->
+    @Html.Partial("_Header");
+    <!--sidebar-menu-->
+    @Html.Partial("_Sidebar");
+    <!--sidebar-menu-->
+    <!--main-container-part-->
+    <div id="content">
+        <!--breadcrumbs-->
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
+        </div>
+        <!--End-breadcrumbs-->
+        <!--Action boxes-->
+        <div style="margin-left:50px;" class="body-content container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <!--end-main-container-part-->
+    <!--Footer-part-->
+
+    <div class="row-fluid">
+        <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
+    </div>
+
+    <!--end-Footer-part-->
+
+    <script src="~/Content/frontend/js/excanvas.min.js"></script>
+    <script src="~/Content/frontend/js/jquery.min.js"></script>
+    <script src="~/Content/frontend/js/jquery.ui.custom.js"></script>
+    <script src="~/Content/frontend/js/bootstrap.min.js"></script>
+    <script src="~/Content/frontend/js/jquery.flot.min.js"></script>
+    <script src="~/Content/frontend/js/jquery.flot.resize.min.js"></script>
+    <script src="~/Content/frontend/js/jquery.peity.min.js"></script>
+    <script src="~/Content/frontend/js/fullcalendar.min.js"></script>
+    <script src="~/Content/frontend/js/matrix.js"></script>
+    <script src="~/Content/frontend/js/matrix.dashboard.js"></script>
+    <script src="~/Content/frontend/js/jquery.gritter.min.js"></script>
+    <script src="~/Content/frontend/js/matrix.interface.js"></script>
+    <script src="~/Content/frontend/js/matrix.chat.js"></script>
+    <script src="~/Content/frontend/js/jquery.validate.js"></script>
+    <script src="~/Content/frontend/js/matrix.form_validation.js"></script>
+    <script src="~/Content/frontend/js/jquery.wizard.js"></script>
+    <script src="~/Content/frontend/js/jquery.uniform.js"></script>
+    <script src="~/Content/frontend/js/select2.min.js"></script>
+    <script src="~/Content/frontend/js/matrix.popover.js"></script>
+    <script src="~/Content/frontend/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/frontend/js/matrix.tables.js"></script>
+
+    <script type="text/javascript">
+        // This function is called from the pop-up menus to transfer to
+        // a different page. Ignore if the value returned is a null string:
+        function goPage(newURL) {
+
+            // if url is empty, skip the menu dividers and reset the menu selection to default
+            if (newURL != "") {
+
+                // if url is "-", it is this page -- reset the menu:
+                if (newURL == "-") {
+                    resetMenu();
+                }
+                // else, send page to designated URL
+                else {
+                    document.location.href = newURL;
+                }
+            }
+        }
+
+        // resets the menu selection upon entry to this page:
+        function resetMenu() {
+            document.gomenu.selector.selectedIndex = 2;
+        }
+    </script>
+    @RenderSection("scripts", required: false)
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+
+
+
+@*
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>*@

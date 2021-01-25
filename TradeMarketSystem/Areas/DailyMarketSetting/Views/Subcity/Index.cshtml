@@ -1,0 +1,28 @@
+﻿
+@(Html.Kendo().Grid<TradeMarketSystem.Core.Model.Daily_Market.SubCity>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+        columns.Bound(c => c.Name);
+        columns.Bound(c => c.Code);
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar => {
+            toolbar.Create();
+      })
+      .Editable(editable => editable.Mode(GridEditMode.InLine))
+      .Pageable()
+      .Sortable(sortable => {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.SubCityId))
+          .Read(read => read.Action("SubCities_Read", "Subcity"))
+          .Create(create => create.Action("SubCities_Create", "Subcity"))
+          .Update(update => update.Action("SubCities_Update", "Subcity"))
+          .Destroy(destroy => destroy.Action("SubCities_Destroy", "Subcity"))
+      )
+)
