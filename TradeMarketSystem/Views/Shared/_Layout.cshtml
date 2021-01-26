@@ -15,14 +15,11 @@
     <link href="@Url.Content("~/Content/kendo/2020.1.219/kendo.Material.min.css")" rel="stylesheet" type="text/css" />
     @*<link href="@Url.Content("~/Content/kendo/2020.1.219/kendo.dataviz.default.min.css")" rel="stylesheet" type="text/css" />*@
 
-    <link rel="stylesheet" href="~/Content/frontend/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Content/frontend/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/Content/frontend/css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="~/Content/frontend/css/fullcalendar.css" />
-    <link rel="stylesheet" href="~/Content/frontend/css/matrix-style.css" />
-    <link rel="stylesheet" href="~/Content/frontend/css/matrix-media.css" />
-    <link href="font-awesome/~/Content/frontend/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/Content/frontend/css/jquery.gritter.css" />
+    <link href="~/Content/frontend/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/frontend/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/frontend/css/datepicker3.css" rel="stylesheet">
+    <link href="~/Content/frontend/css/styles.css" rel="stylesheet">
 
     <script src="@Url.Content("~/Scripts/kendo/2020.1.219/jquery.min.js")"></script>
     <script src="@Url.Content("~/Scripts/kendo/2020.1.219/jszip.min.js")"></script>
@@ -37,68 +34,25 @@
     @Html.Partial("_Sidebar");
     <!--sidebar-menu-->
     <!--main-container-part-->
-    <div id="content">
-        <!--breadcrumbs-->
-        <div id="content-header">
-            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
-        </div>
-        <!--End-breadcrumbs-->
-        <!--Action boxes-->
-        <div class="container-fluid">
-            @RenderBody()
-        </div>
+    <div style="padding-top:30px" class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+
+        @RenderBody()
     </div>
+  
     <!--end-main-container-part-->
     <!--Footer-part-->
-
     @Html.Partial("_Footer");
-    <!--end-Footer-part-->
 
-    <script src="~/Content/frontend/js/excanvas.min.js"></script>
+    <!--end-Footer-part-->
     @*<script src="~/Content/frontend/js/jquery.min.js"></script>*@
-    <script src="~/Content/frontend/js/jquery.ui.custom.js"></script>
     <script src="~/Content/frontend/js/bootstrap.min.js"></script>
-    <script src="~/Content/frontend/js/jquery.flot.min.js"></script>
-    <script src="~/Content/frontend/js/jquery.flot.resize.min.js"></script>
-    <script src="~/Content/frontend/js/jquery.peity.min.js"></script>
-    <script src="~/Content/frontend/js/fullcalendar.min.js"></script>
-    <script src="~/Content/frontend/js/matrix.js"></script>
-    <script src="~/Content/frontend/js/matrix.dashboard.js"></script>
-    <script src="~/Content/frontend/js/jquery.gritter.min.js"></script>
-    <script src="~/Content/frontend/js/matrix.interface.js"></script>
-    <script src="~/Content/frontend/js/matrix.chat.js"></script>
-    <script src="~/Content/frontend/js/jquery.validate.js"></script>
-    <script src="~/Content/frontend/js/matrix.form_validation.js"></script>
-    <script src="~/Content/frontend/js/jquery.wizard.js"></script>
-    <script src="~/Content/frontend/js/jquery.uniform.js"></script>
-    <script src="~/Content/frontend/js/select2.min.js"></script>
-    <script src="~/Content/frontend/js/matrix.popover.js"></script>
-    <script src="~/Content/frontend/js/jquery.dataTables.min.js"></script>
-    <script src="~/Content/frontend/js/matrix.tables.js"></script>
+
+    <script src="~/Content/frontend/js/custom.js"></script>
 
     <script type="text/javascript">
-        // This function is called from the pop-up menus to transfer to
-        // a different page. Ignore if the value returned is a null string:
-        function goPage(newURL) {
+                // This function is called from the pop-up menus to transfer to
+                // a different page. Ignore if the value returned is a null string:
 
-            // if url is empty, skip the menu dividers and reset the menu selection to default
-            if (newURL != "") {
-
-                // if url is "-", it is this page -- reset the menu:
-                if (newURL == "-") {
-                    resetMenu();
-                }
-                // else, send page to designated URL
-                else {
-                    document.location.href = newURL;
-                }
-            }
-        }
-
-        // resets the menu selection upon entry to this page:
-        function resetMenu() {
-            document.gomenu.selector.selectedIndex = 2;
-        }
     </script>
     @RenderSection("scripts", required: false)
 </body>
