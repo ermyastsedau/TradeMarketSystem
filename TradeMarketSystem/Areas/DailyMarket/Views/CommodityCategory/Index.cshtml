@@ -1,0 +1,30 @@
+﻿
+@(Html.Kendo().Grid<TradeMarketSystem.Core.Model.Daily_Market.CommodityCategory>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+        columns.Bound(c => c.Name);
+        columns.Bound(c => c.Code);
+        columns.Bound(c => c.Description);
+        columns.Bound(c => c.Remark);
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar => {
+            toolbar.Create();
+      })
+      .Editable(editable => editable.Mode(GridEditMode.InLine))
+      .Pageable()
+      .Sortable(sortable => {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.CommodityCategoryId))
+          .Read(read => read.Action("CommodityCategories_Read", "CommodityCategory"))
+          .Create(create => create.Action("CommodityCategories_Create", "CommodityCategory"))
+          .Update(update => update.Action("CommodityCategories_Update", "CommodityCategory"))
+          .Destroy(destroy => destroy.Action("CommodityCategories_Destroy", "CommodityCategory"))
+      )
+)

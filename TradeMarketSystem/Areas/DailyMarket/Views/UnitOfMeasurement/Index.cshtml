@@ -1,0 +1,29 @@
+﻿
+@(Html.Kendo().Grid<TradeMarketSystem.Core.Model.Daily_Market.UnitOfMeasurement>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+        columns.Bound(c => c.Name);
+        columns.Bound(c => c.Code);
+        columns.Bound(c => c.Symbol);
+        columns.Bound(c => c.Weight);
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar => {
+            toolbar.Create();
+      })
+      .Editable(editable => editable.Mode(GridEditMode.InLine))
+      .Pageable()
+      .Sortable(sortable => {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.UnitOfMeasurementId))
+          .Read(read => read.Action("UnitOfMeasurements_Read", "UnitOfMeasurement"))
+          .Create(create => create.Action("UnitOfMeasurements_Create", "UnitOfMeasurement"))
+          .Update(update => update.Action("UnitOfMeasurements_Update", "UnitOfMeasurement"))
+          .Destroy(destroy => destroy.Action("UnitOfMeasurements_Destroy", "UnitOfMeasurement"))
+      )
+)

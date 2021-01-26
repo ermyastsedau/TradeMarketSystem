@@ -1,0 +1,35 @@
+﻿
+@(Html.Kendo().Grid<TradeMarketSystem.Core.Model.Daily_Market.Wereda>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+        columns.Bound(c => c.Code);
+        columns.Bound(c => c.Name);
+        columns.Bound(c => c.SubcityId);
+        columns.Bound(c => c.Description);
+        columns.Bound(c => c.Remark);
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar => {
+            toolbar.Create();
+      })
+      .Editable(editable => editable.Mode(GridEditMode.InLine))
+      .Pageable()
+      .Selectable(selectable => {
+            selectable.Mode(GridSelectionMode.Single);
+            selectable.Type(GridSelectionType.Row);
+      })
+      .Sortable(sortable => {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.WeredaId))
+          .Read(read => read.Action("Weredas_Read", "Wereda"))
+          .Create(create => create.Action("Weredas_Create", "Wereda"))
+          .Update(update => update.Action("Weredas_Update", "Wereda"))
+          .Destroy(destroy => destroy.Action("Weredas_Destroy", "Wereda"))
+      )
+)
