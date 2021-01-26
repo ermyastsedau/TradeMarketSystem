@@ -41,8 +41,8 @@ dlldata.c
 project.lock.json
 
 #ignore kendo script and css
-TradeMarketSystem/Scripts/kendo
-TradeMarketSystem/Content/kendo
+kendo/
+
 project.fragment.lock.json
 artifacts/
 *_i.c

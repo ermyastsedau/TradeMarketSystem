@@ -183,8 +183,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\DailyMarketSetting\Controllers\SubcityController.cs" />
-    <Compile Include="Areas\DailyMarketSetting\DailyMarketSettingAreaRegistration.cs" />
+    <Compile Include="Areas\DailyMarket\Controllers\Setting\CommodityCategoryController.cs" />
+    <Compile Include="Areas\DailyMarket\Controllers\Setting\CommodityController.cs" />
+    <Compile Include="Areas\DailyMarket\Controllers\Setting\MarketController.cs" />
+    <Compile Include="Areas\DailyMarket\Controllers\Setting\SubcityController.cs" />
+    <Compile Include="Areas\DailyMarket\Controllers\Setting\UnitOfMeasurementController.cs" />
+    <Compile Include="Areas\DailyMarket\Controllers\Setting\WeredaController.cs" />
     <Compile Include="Areas\DailyMarket\DailyMarketAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -199,6 +203,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\DailyMarket\Views\Subcity\Index.cshtml" />
+    <Content Include="Areas\DailyMarket\Views\web.config" />
+    <Content Include="Areas\DailyMarket\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -772,11 +779,11 @@
     <Content Include="Content\kendo\2020.1.219\kendo.silver.mobile.min.css.map" />
     <Content Include="Content\kendo\2020.1.219\kendo.uniform.min.css.map" />
     <Content Include="Content\kendo\2020.1.219\kendo.uniform.mobile.min.css.map" />
-    <Content Include="Areas\DailyMarketSetting\Views\web.config" />
-    <Content Include="Areas\DailyMarketSetting\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\DailyMarketSetting\Views\Subcity\Index.cshtml" />
-    <Content Include="Areas\DailyMarket\Views\web.config" />
-    <Content Include="Areas\DailyMarket\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\DailyMarket\Views\Wereda\Index.cshtml" />
+    <Content Include="Areas\DailyMarket\Views\Market\Index.cshtml" />
+    <Content Include="Areas\DailyMarket\Views\UnitOfMeasurement\Index.cshtml" />
+    <Content Include="Areas\DailyMarket\Views\CommodityCategory\Index.cshtml" />
+    <Content Include="Areas\DailyMarket\Views\Commodity\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2915,12 +2922,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\DailyMarketSetting\Data\" />
-    <Folder Include="Areas\DailyMarketSetting\Views\Shared\" />
-    <Folder Include="Areas\DailyMarket\Controllers\" />
     <Folder Include="Areas\DailyMarket\Data\" />
     <Folder Include="Areas\DailyMarket\Views\Shared\" />
+    <Folder Include="Views\CommodityCategory\" />
+    <Folder Include="Views\Commodity\" />
+    <Folder Include="Views\Market\" />
     <Folder Include="Views\subcity\" />
+    <Folder Include="Views\UnitOfMeasurement\" />
+    <Folder Include="Views\Wereda\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

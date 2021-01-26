@@ -37,12 +37,17 @@ namespace TradeMarketSystem.DataAccess.Context
 
    
 
-            #region InfoDesk
+            #region DailyMarket
             modelBuilder.Configurations.Add(new TradeMarketSystem.DataAccess.Context.DailyMarketEntityConfiguration.SubCityEntityTypeConfiguration());
-          
+            modelBuilder.Configurations.Add(new TradeMarketSystem.DataAccess.Context.DailyMarketEntityConfiguration.WeredaEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new TradeMarketSystem.DataAccess.Context.DailyMarketEntityConfiguration.MarketEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new TradeMarketSystem.DataAccess.Context.DailyMarketEntityConfiguration.UnitOfMeasurementEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new TradeMarketSystem.DataAccess.Context.DailyMarketEntityConfiguration.CommodityCategoryEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new TradeMarketSystem.DataAccess.Context.DailyMarketEntityConfiguration.CommodityEntityTypeConfiguration());
+
             #endregion
 
-        
+
 
 
 
@@ -58,31 +63,36 @@ namespace TradeMarketSystem.DataAccess.Context
 
 
 
-    
-
-       
 
 
 
 
 
-      
-
-  
 
 
 
-       
-
- 
 
 
-    
 
 
-        #region  InfoDesk
+
+
+
+
+
+
+
+
+
+
+        #region  DailyMarket
         public DbSet<SubCity> SubCities { set; get; }
-              #endregion
+        public DbSet<Wereda> Weredas{ set; get; }
+        public DbSet<Market> Markets { set; get; }
+        public DbSet<UnitOfMeasurement> UnitOfMeasurements { set; get; }
+        public DbSet<CommodityCategory> CommodityCategories { set; get; }
+        public DbSet<Commodity> Commodities { set; get; }
+        #endregion
 
 
 
