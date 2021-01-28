@@ -7,3 +7,22 @@ padding-right:12px;
 ul.nav li.parent li.sub-sub-menu ul {
     padding-left: 12px
 }
+
+.footer {
+    position: absolute;
+    bottom: -150px;
+
+   align-content:center;
+   color:white;
+   width: 180%;
+    /* Set the fixed height of the footer here */
+   height: 60px;
+   background-color: #444;
+}
+.footer .footer-inner {
+    padding-top:2em;
+
+
+
+}
+
