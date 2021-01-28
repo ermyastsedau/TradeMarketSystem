@@ -52,13 +52,9 @@
   <ItemGroup>
     <Compile Include="Context\DailyMarketEntityConfiguration.cs" />
     <Compile Include="Context\TradeDbContext.cs" />
-    <Compile Include="Migrations\202101221208186_first-migrate.cs" />
-    <Compile Include="Migrations\202101221208186_first-migrate.designer.cs">
-      <DependentUpon>202101221208186_first-migrate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101260922053_secondmig.cs" />
-    <Compile Include="Migrations\202101260922053_secondmig.Designer.cs">
-      <DependentUpon>202101260922053_secondmig.cs</DependentUpon>
+    <Compile Include="Migrations\202101281502295_Initial-migration.cs" />
+    <Compile Include="Migrations\202101281502295_Initial-migration.Designer.cs">
+      <DependentUpon>202101281502295_Initial-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,11 +70,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101221208186_first-migrate.resx">
-      <DependentUpon>202101221208186_first-migrate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101260922053_secondmig.resx">
-      <DependentUpon>202101260922053_secondmig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101281502295_Initial-migration.resx">
+      <DependentUpon>202101281502295_Initial-migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
