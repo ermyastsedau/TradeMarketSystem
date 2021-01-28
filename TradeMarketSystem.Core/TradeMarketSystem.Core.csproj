@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Common\TrackTransaction.cs" />
     <Compile Include="Model\Common\TrackUser.cs" />
+    <Compile Include="Model\Common\TrackTransaction.cs" />
     <Compile Include="Model\CustomerService\Enum\Enum.cs" />
     <Compile Include="Model\CustomerService\Setting\StatusType.cs" />
     <Compile Include="Model\Daily Market\Commodity.cs" />

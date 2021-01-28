@@ -10,7 +10,7 @@ namespace TradeMarketSystem.Core.Model.Common
         public string CreatedBy { get; set; }
         public string ModifiedBy { get; set; }
     }
-   
+
     public class Operations : TrackUserSettingOperation
     {
         public string Status { get; set; }
@@ -35,7 +35,7 @@ namespace TradeMarketSystem.Core.Model.Common
         public bool IsSecondOnlineApproved { get; set; }
         public string SecondOnlineApprovedBy { get; set; }
         public DateTime? SecondOnlineApprovedTime { get; set; }
-        
+
         public bool IsSecondSendForApproval { get; set; }
         public string SecondSendForApprovalBy { get; set; }
         public DateTime? SecondSendForApprovalTime { get; set; }
@@ -54,5 +54,5 @@ namespace TradeMarketSystem.Core.Model.Common
     public class TrackUserOperation : TrackUserSettingOperation
     {
         public string OrgBranchName { get; set; }
-    }                                                         
+    }
 }

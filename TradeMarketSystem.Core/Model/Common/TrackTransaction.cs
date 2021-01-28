@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TradeMarketSystem.Core.Model.Common
 {
-    public class TrackTransaction:TrackUserOperation
+    public class TrackTransaction : TrackUserOperation
     {
         public string Status { get; set; }
         public bool IsOnlineApproved { get; set; }
