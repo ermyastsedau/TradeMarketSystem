@@ -54,6 +54,9 @@
     <Compile Include="Model\Daily Market\Wereda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\InformalTrade\" />
+    <Folder Include="Model\LicenseInspection\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
