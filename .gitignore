@@ -13,8 +13,7 @@ TradeMarketSystem.Web/App_Data/*
 TradeMarketSystem.Web/App_Data/*
 TradeMarketSystem.DataAccess/Migrations/*
 TradeMarketSystem.DataAccess/Migrations
-TradeMarketSystem.Web.Content/kendo/*
-TradeMarketSystem.Web.Scripts/kendo/*
+
 ##
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -47,7 +46,7 @@ dlldata.c
 project.lock.json
 
 #ignore kendo script and css
-kendo/
+
 
 project.fragment.lock.json
 artifacts/
