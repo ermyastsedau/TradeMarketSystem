@@ -19,6 +19,7 @@ namespace TradeMarketSystem.Areas.DailyMarket.Setting.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.page = "Sub City";
             return View();
         }
 

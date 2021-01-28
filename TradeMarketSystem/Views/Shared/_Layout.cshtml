@@ -12,7 +12,7 @@
     @*<link href="@Url.Content("~/Content/kendo/2020.1.219/kendo.common-material.min.css")" rel="stylesheet" type="text/css" />*@
     <link href="@Url.Content("~/Content/kendo/2020.1.219/kendo.mobile.all.min.css")" rel="stylesheet" type="text/css" />
     @*<link href="@Url.Content("~/Content/kendo/2020.1.219/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />*@
-    <link href="@Url.Content("~/Content/kendo/2020.1.219/kendo.Material.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2020.1.219/kendo.default.min.css")" rel="stylesheet" type="text/css" />
     @*<link href="@Url.Content("~/Content/kendo/2020.1.219/kendo.dataviz.default.min.css")" rel="stylesheet" type="text/css" />*@
 
     <link rel="stylesheet" href="~/Content/frontend/css/bootstrap.css" />
@@ -35,6 +35,16 @@
     <!--sidebar-menu-->
     <!--main-container-part-->
     <div style="padding-top:30px" class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">
+                        <em class="fa fa-home"></em>
+                    </a>
+                </li>
+                <li class="active">@ViewBag.Page</li>
+            </ol>
+        </div><!--/.row-->
 
         @RenderBody()
     </div>
@@ -52,7 +62,15 @@
     <script type="text/javascript">
                 // This function is called from the pop-up menus to transfer to
                 // a different page. Ignore if the value returned is a null string:
+        $(document).on("click", "ul.nav li.parent > a ", function () {
+            $(this).find('em').toggleClass("fa-minus");
+        });
+        $(document).on("click", "ul.nav li> a", function () {
+            $("ul.nav li").removeClass("active");
+            $(this).parent().addClass("active");
+        });
 
+        $(".sidebar span.icon").find('em:first').addClass("fa-plus");
     </script>
     @RenderSection("scripts", required: false)
 </body>

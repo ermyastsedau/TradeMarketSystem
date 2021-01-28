@@ -183,6 +183,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\CustomerService\CustomerServiceAreaRegistration.cs" />
     <Compile Include="Areas\DailyMarket\Controllers\Setting\CommodityCategoryController.cs" />
     <Compile Include="Areas\DailyMarket\Controllers\Setting\CommodityController.cs" />
     <Compile Include="Areas\DailyMarket\Controllers\Setting\MarketController.cs" />
@@ -223,6 +224,7 @@
     <Content Include="Content\frontend\css\matrix-media.css" />
     <Content Include="Content\frontend\css\matrix-style.css" />
     <Content Include="Content\frontend\css\select2.css" />
+    <Content Include="Content\frontend\css\styles.css" />
     <Content Include="Content\frontend\css\uniform.css" />
     <Content Include="Content\frontend\font-awesome\css\font-awesome.css" />
     <Content Include="Content\frontend\font-awesome\fontawesome-webfont.svg" />
@@ -300,6 +302,7 @@
     <Content Include="Content\frontend\js\bootstrap-wysihtml5.js" />
     <Content Include="Content\frontend\js\bootstrap.js" />
     <Content Include="Content\frontend\js\bootstrap.min.js" />
+    <Content Include="Content\frontend\js\custom.js" />
     <Content Include="Content\frontend\js\excanvas.min.js" />
     <Content Include="Content\frontend\js\fullcalendar.min.js" />
     <Content Include="Content\frontend\js\jquery.dataTables.min.js" />
@@ -784,6 +787,7 @@
     <Content Include="Areas\DailyMarket\Views\UnitOfMeasurement\Index.cshtml" />
     <Content Include="Areas\DailyMarket\Views\CommodityCategory\Index.cshtml" />
     <Content Include="Areas\DailyMarket\Views\Commodity\Index.cshtml" />
+    <Content Include="Areas\CustomerService\Views\web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2922,6 +2926,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\CustomerService\Controllers\" />
+    <Folder Include="Areas\CustomerService\Data\" />
+    <Folder Include="Areas\CustomerService\Views\Shared\" />
     <Folder Include="Areas\DailyMarket\Data\" />
     <Folder Include="Areas\DailyMarket\Views\Shared\" />
     <Folder Include="Views\CommodityCategory\" />

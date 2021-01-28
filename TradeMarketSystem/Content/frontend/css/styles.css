@@ -758,7 +758,7 @@ a.label:hover, a.label:focus {
   padding: 0;
   display: none;
   box-shadow: none;
-  background: #fff; }
+  background: #444; }
 
 .sidebar ul {
   margin: 20px 0px; }
@@ -800,7 +800,7 @@ a.label:hover, a.label:focus {
   height: 50px;
   font-size: 15px;
   line-height: 2em;
-  color: #444444; }
+  color: #fff; }
 
 .sidebar ul.nav ul.children {
   width: auto;

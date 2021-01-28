@@ -3,21 +3,33 @@
       .Name("grid")
       .Columns(columns =>
       {
-        columns.Bound(c => c.Name);
-        columns.Bound(c => c.Code);
-        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+          columns.Bound(c => c.Name);
+          columns.Bound(c => c.Code);
+          columns.Bound(c => c.Description);
+          columns.Bound(c => c.Remark);
+
+          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
       })
-      .ToolBar(toolbar => {
-            toolbar.Create();
+      .ToolBar(toolbar =>
+      {
+          toolbar.Create();
       })
-      .Editable(editable => editable.Mode(GridEditMode.InLine))
-      .Pageable()
-      .Sortable(sortable => {
-          sortable.SortMode(GridSortMode.SingleColumn);
-      })
-      .Filterable()
-      .Scrollable()
-      .DataSource(dataSource => dataSource
+                                                      .Editable(editable => editable.Mode(GridEditMode.InLine))
+                                                                .HtmlAttributes(new { style = "height: 520px;" })
+                                                                                  .Pageable(pageable => pageable
+                                                                                                    .Input(true)
+                                                                                                    .Numeric(false)
+                                                                                                    .Refresh(true)
+                                                                                                    .PageSizes(true)
+                                                                                                    .ButtonCount(5))
+                                                                                          .Scrollable()
+                                                                                        .Sortable()
+                                                                                        .Filterable()
+                                                                                        .Groupable()
+                                                                                        .Scrollable(h => h.Height(500))
+
+
+                   .DataSource(dataSource => dataSource
           .Ajax()
           .Model(model => model.Id(p => p.SubCityId))
           .Read(read => read.Action("SubCities_Read", "Subcity"))
