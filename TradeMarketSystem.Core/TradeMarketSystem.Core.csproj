@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Common\TrackTransaction.cs" />
+    <Compile Include="Model\Common\TrackUser.cs" />
+    <Compile Include="Model\CustomerService\Enum\Enum.cs" />
+    <Compile Include="Model\CustomerService\Setting\StatusType.cs" />
     <Compile Include="Model\Daily Market\Commodity.cs" />
     <Compile Include="Model\Daily Market\CommodityCategory.cs" />
     <Compile Include="Model\Daily Market\Market.cs" />
@@ -49,5 +54,6 @@
     <Compile Include="Model\Daily Market\Wereda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

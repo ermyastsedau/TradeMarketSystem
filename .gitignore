@@ -8,7 +8,7 @@
 ## Files under the App_Data\Import\Construction
 TradeMarketSystem.Web/App_Data/Import/Construction/Estimation/*
 TradeMarketSystem.Web/App_Data/*
-TradeMarketSystem.DataAccess/Migrations/*
+TradeMarketSystem.DataAccess/Migrations
 ##
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

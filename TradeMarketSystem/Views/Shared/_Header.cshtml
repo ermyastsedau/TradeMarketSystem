@@ -7,9 +7,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span>ADMIN</span>PANEL</a>
+            <a class="navbar-brand" href="#"><span>AATIDB</span></a>
             <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
+                @Html.Partial("_LoginPartial")
+                @*<li class="dropdown">
                     <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                         <em class="fa fa-envelope"></em><span class="label label-danger">15</span>
                     </a>
@@ -48,8 +49,8 @@
                             </div>
                         </li>
                     </ul>
-                </li>
-                <li class="dropdown">
+                </li>*@
+                @*<li class="dropdown">
                     <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                         <em class="fa fa-bell"></em><span class="label label-info">5</span>
                     </a>
@@ -81,7 +82,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>*@
             </ul>
         </div>
     </div><!-- /.container-fluid -->

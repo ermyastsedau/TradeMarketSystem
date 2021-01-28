@@ -215,6 +215,7 @@
     <Content Include="Content\frontend\css\bootstrap-wysihtml5.css" />
     <Content Include="Content\frontend\css\bootstrap.min.css" />
     <Content Include="Content\frontend\css\colorpicker.css" />
+    <Content Include="Content\frontend\css\custom_css.css" />
     <Content Include="Content\frontend\css\datepicker.css" />
     <Content Include="Content\frontend\css\font-awesome.css" />
     <Content Include="Content\frontend\css\fullcalendar.css" />
@@ -2923,10 +2924,14 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Sidebar.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_CustomerService.cshtml" />
+    <Content Include="Views\Shared\_Dashboards.cshtml" />
+    <Content Include="Views\Shared\_LicenseInspection.cshtml" />
+    <Content Include="Views\Shared\_InformalTrade.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\CustomerService\Controllers\" />
+    <Folder Include="Areas\CustomerService\Controllers\Setting\" />
     <Folder Include="Areas\CustomerService\Data\" />
     <Folder Include="Areas\CustomerService\Views\Shared\" />
     <Folder Include="Areas\DailyMarket\Data\" />
