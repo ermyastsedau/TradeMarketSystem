@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TradeMarketSystem.Core.Model.Daily_Market
+namespace TradeMarketSystem.Core.Model.Common
 {
   public   class Wereda
     {

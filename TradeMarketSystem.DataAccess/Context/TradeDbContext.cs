@@ -2,6 +2,7 @@
 
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using TradeMarketSystem.Core.Model.Common;
 using TradeMarketSystem.Core.Model.Daily_Market;
 
 namespace TradeMarketSystem.DataAccess.Context

@@ -5,6 +5,7 @@ using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TradeMarketSystem.Core.Model.Common;
 using TradeMarketSystem.Core.Model.Daily_Market;
 
 namespace TradeMarketSystem.DataAccess.Context

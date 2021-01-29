@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
+using TradeMarketSystem.Core.Model.Common;
 using TradeMarketSystem.Core.Model.Daily_Market;
 using TradeMarketSystem.DataAccess.Context;
 

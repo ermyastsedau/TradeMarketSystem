@@ -49,9 +49,9 @@
     <Compile Include="Model\Daily Market\Commodity.cs" />
     <Compile Include="Model\Daily Market\CommodityCategory.cs" />
     <Compile Include="Model\Daily Market\Market.cs" />
-    <Compile Include="Model\Daily Market\SubCity.cs" />
+    <Compile Include="Model\Common\SubCity.cs" />
     <Compile Include="Model\Daily Market\UnitOfMeasurement.cs" />
-    <Compile Include="Model\Daily Market\Wereda.cs" />
+    <Compile Include="Model\Common\Wereda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

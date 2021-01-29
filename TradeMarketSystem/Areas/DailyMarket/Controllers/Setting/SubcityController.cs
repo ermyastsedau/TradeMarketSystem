@@ -10,6 +10,7 @@ using TradeMarketSystem.DataAccess.Context;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using TradeMarketSystem.Core.Model.Daily_Market;
+using TradeMarketSystem.Core.Model.Common;
 
 namespace TradeMarketSystem.Areas.DailyMarket.Setting.Controllers
 {
@@ -25,7 +26,7 @@ namespace TradeMarketSystem.Areas.DailyMarket.Setting.Controllers
 
         public ActionResult SubCities_Read([DataSourceRequest]DataSourceRequest request)
         {
-            IQueryable<SubCity> subcities = db.SubCities;
+            IQueryable<Core.Model.Common.SubCity> subcities = db.SubCities;
             DataSourceResult result = subcities.ToDataSourceResult(request, subCity => new {
                 SubCityId = subCity.SubCityId,
                 Name = subCity.Name,

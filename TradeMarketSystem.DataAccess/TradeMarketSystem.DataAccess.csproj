@@ -52,10 +52,6 @@
   <ItemGroup>
     <Compile Include="Context\DailyMarketEntityConfiguration.cs" />
     <Compile Include="Context\TradeDbContext.cs" />
-    <Compile Include="Migrations\202101281502295_Initial-migration.cs" />
-    <Compile Include="Migrations\202101281502295_Initial-migration.Designer.cs">
-      <DependentUpon>202101281502295_Initial-migration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,11 +64,6 @@
       <Project>{E3E7206B-AB55-4A82-8C41-91AEF8D87CB6}</Project>
       <Name>TradeMarketSystem.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101281502295_Initial-migration.resx">
-      <DependentUpon>202101281502295_Initial-migration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
